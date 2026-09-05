@@ -9,8 +9,8 @@ html {
 body {
     margin: 0;
     font-family: Inter, Segoe UI, Arial, sans-serif;
-    color: #fff;
-    background: white;
+    color: #24352d;
+    background: #f7f5fc;
     overflow-x: hidden
 }
 
@@ -33,7 +33,7 @@ select {
     display: flex;
     align-items: center;
     gap: 24px;
-    background: rgba(4, 25, 17, .88);
+    background: #f7f5fc;
     backdrop-filter: blur(18px);
     border-bottom: 1px solid rgba(255, 255, 255, .12);
     box-shadow: 0 8px 30px rgba(0, 0, 0, .22)
@@ -74,7 +74,7 @@ select {
     border-radius: 10px;
     font-size: 13px;
     font-weight: 700;
-    color: #d9eee3;
+    color: #375347;
     transition: .3s
 }
 
@@ -105,7 +105,7 @@ select {
 .language-switcher select {
     border: 0;
     background: transparent;
-    color: #fff;
+    color: #24352d;
     font-weight: 800;
     outline: 0;
     cursor: pointer
@@ -153,15 +153,15 @@ select {
     isolation: isolate;
     background-size: cover;
     background-position: center;
-    background-color: transparent;
-    background-blend-mode: normal;
+    background-color: #174a35;
+    background-blend-mode: soft-light;
     overflow: hidden
 }
 
 .section-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(3, 27, 17, .7), rgba(3, 45, 29, .48) 50%, rgba(3, 19, 13, .72));
+    background: transparent;
     z-index: -1
 }
 
@@ -172,13 +172,13 @@ select {
     align-items: center;
     gap: 50px;
     padding: 70px clamp(20px, 6vw, 90px);
-    background-image: url('image/tanzania-flag.jpg')
+    background: #f7f5fc
 }
 
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(90deg, rgba(0, 0, 0, .7) 0%, rgba(0, 0, 0, .52) 46%, rgba(0, 0, 0, .22) 100%);
+    background: transparent;
     z-index: -1
 }
 
@@ -223,10 +223,17 @@ select {
     color: #f7d51c
 }
 
+.hero h1,
+.section-head h2,
+.purpose h2,
+.communication-heading h3 {
+    color: #173d2d
+}
+
 .hero-copy>p {
     font-size: 17px;
     line-height: 1.8;
-    color: #e7f1eb;
+    color: #52675d;
     max-width: 720px;
     margin: 0 0 25px
 }
@@ -282,12 +289,81 @@ select {
     justify-self: end
 }
 
+.hero-side::before {
+    content: "";
+    position: absolute;
+    inset: 12% -12% -8% 8%;
+    border: 1px solid rgba(247, 213, 28, .28);
+    border-radius: 38px;
+    transform: rotate(-5deg);
+    pointer-events: none
+}
+
 .hero-photo-card {
+    position: relative;
+    z-index: 2;
     border-radius: 28px;
     overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, .25);
-    box-shadow: 0 25px 70px rgba(0, 0, 0, .42);
-    transform: rotate(2deg)
+    border: 0;
+    background: #fff;
+    box-shadow: 0 0 42px rgba(255, 255, 255, .95), 0 18px 45px rgba(0, 0, 0, .08);
+    transform: rotate(2deg);
+    overflow: visible;
+    animation: mainPhotoFloat 6s ease-in-out infinite
+}
+
+.floating-photo {
+    position: absolute;
+    z-index: 3;
+    width: 170px;
+    height: 132px;
+    padding: 6px;
+    border: 1px solid rgba(255, 255, 255, .5);
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 16px 34px rgba(43, 64, 53, .18);
+    animation: photoFloat 5s ease-in-out infinite
+}
+
+.floating-photo img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 13px
+}
+
+.floating-photo-general {
+    left: -74px;
+    bottom: 38px;
+    transform: rotate(-8deg)
+}
+
+.floating-photo-social {
+    right: -58px;
+    bottom: 118px;
+    transform: rotate(8deg);
+    animation-delay: -2.2s
+}
+
+@keyframes photoFloat {
+    0%,
+    100% {
+        margin-top: 0;
+    }
+    50% {
+        margin-top: -14px;
+    }
+}
+
+@keyframes mainPhotoFloat {
+    0%,
+    100% {
+        transform: rotate(2deg) translateY(0);
+    }
+    50% {
+        transform: rotate(2deg) translateY(-12px);
+    }
 }
 
 .hero-photo-card img {
@@ -309,7 +385,10 @@ img {
     right: 0;
     bottom: 0;
     padding: 18px 20px;
-    background: white;
+    background: transparent;
+    color: #375347;
+    font-size: 11px;
+    font-weight: 800;
     letter-spacing: 1px
 }
 
@@ -317,7 +396,8 @@ img {
     position: absolute;
     right: -20px;
     top: 28px;
-    background: #07552b;
+    background: #dfeee5;
+    color: #174a35;
     border: 1px solid rgba(255, 255, 255, .25);
     padding: 15px 18px;
     border-radius: 16px;
@@ -336,7 +416,7 @@ img {
     padding: 14px 18px;
     border: 1px solid rgba(255, 255, 255, .17);
     border-radius: 18px;
-    background: rgba(0, 0, 0, .4);
+    background: rgba(255, 255, 255, .72);
     backdrop-filter: blur(12px);
     overflow: hidden
 }
@@ -369,7 +449,7 @@ img {
 
 .tribe-pill {
     border: 1px solid rgba(255, 255, 255, .2);
-    background: white;
+    background: #fff;
     color: #071b13;
     padding: 10px 15px;
     border-radius: 999px;
@@ -377,6 +457,16 @@ img {
     cursor: default;
     font-weight: 800;
     transition: .25s
+}
+
+.tribe-pill:hover,
+.tribe-pill:focus-visible {
+    background: #000;
+    color: #fff;
+    border-color: #000;
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, .2);
+    outline: none
 }
 
 .tribe-pill.active {
@@ -396,22 +486,22 @@ img {
 
 .workflow {
     padding: 100px clamp(20px, 6vw, 90px);
-    background-image: url('image/bora.jpg')
+    background: #f7f5fc
 }
 
 .users {
     padding: 100px clamp(20px, 6vw, 90px);
-    background-image: url('image/General\ communication.jpg')
+    background: #f7f5fc
 }
 
 .features {
     padding: 100px clamp(20px, 6vw, 90px);
-    background-image: url('image/ngoja.jpg')
+    background: #f7f5fc
 }
 
 .purpose {
     padding: 100px clamp(20px, 6vw, 90px);
-    background-image: url('image/subir.jpg')
+    background: #f7f5fc
 }
 
 .section-inner {
@@ -438,7 +528,7 @@ img {
 
 .section-head>p {
     max-width: 500px;
-    color: #d9e8df;
+    color: #52675d;
     line-height: 1.75;
     margin: 0
 }
@@ -454,8 +544,8 @@ img {
     position: relative;
     padding: 30px 25px;
     border-radius: 22px;
-    background: rgba(255, 255, 255, .11);
-    border: 1px solid rgba(255, 255, 255, .18);
+    background: rgba(255, 255, 255, .72);
+    border: 1px solid #dce9e1;
     backdrop-filter: blur(12px);
     transition: .3s
 }
@@ -484,7 +574,7 @@ img {
 
 .flow-step p {
     margin: 0;
-    color: #d4e5dc;
+    color: #52675d;
     line-height: 1.65;
     font-size: 13px
 }
@@ -513,8 +603,8 @@ img {
 
 .pro-card {
     flex: 0 0 var(--pro-card-width);
-    background: rgba(2, 23, 15, .68);
-    border: 1px solid rgba(255, 255, 255, .16);
+    background: rgba(255, 255, 255, .86);
+    border: 1px solid #dce9e1;
     border-radius: 22px;
     overflow: hidden;
     backdrop-filter: blur(10px);
@@ -606,13 +696,14 @@ img {
 
 .pro-card h3 {
     font-size: 19px;
-    margin: 9px 0
+    margin: 9px 0;
+    color: #173d2d
 }
 
 .pro-card p {
     font-size: 13px;
     line-height: 1.7;
-    color: #d6e6dd;
+    color: #52675d;
     margin: 0
 }
 
@@ -623,9 +714,9 @@ img {
     align-items: center;
     margin-top: 30px;
     padding: 26px;
-    border: 1px solid rgba(255, 255, 255, .16);
+    border: 1px solid #dce9e1;
     border-radius: 22px;
-    background: rgba(2, 23, 15, .56);
+    background: rgba(255, 255, 255, .74);
     backdrop-filter: blur(10px)
 }
 
@@ -644,7 +735,7 @@ img {
 
 .communication-heading p {
     margin: 0;
-    color: #d6e6dd;
+    color: #52675d;
     line-height: 1.65;
     font-size: 13px
 }
@@ -660,9 +751,9 @@ img {
     gap: 12px;
     align-items: flex-start;
     padding: 15px;
-    border: 1px solid rgba(255, 255, 255, .12);
+    border: 1px solid #dce9e1;
     border-radius: 14px;
-    background: rgba(255, 255, 255, .07)
+    background: rgba(255, 255, 255, .72)
 }
 
 .communication-icon {
@@ -681,7 +772,7 @@ img {
 }
 
 .communication-item small {
-    color: #cfe2d8;
+    color: #52675d;
     line-height: 1.5
 }
 
@@ -707,8 +798,8 @@ img {
 .feature-card {
     padding: 28px;
     border-radius: 22px;
-    background: rgba(0, 0, 0, .42);
-    border: 1px solid rgba(255, 255, 255, .16);
+    background: rgba(255, 255, 255, .78);
+    border: 1px solid #dce9e1;
     backdrop-filter: blur(12px);
     transition: .3s
 }
@@ -730,7 +821,7 @@ img {
 
 .feature-card p {
     margin: 0;
-    color: #d6e6dd;
+    color: #52675d;
     line-height: 1.7;
     font-size: 13px
 }
@@ -745,7 +836,7 @@ img {
 .purpose-inner>div:first-child p {
     max-width: 650px;
     line-height: 1.8;
-    color: #e0eee6;
+    color: #52675d;
     font-size: 16px
 }
 
@@ -760,8 +851,8 @@ img {
     align-items: center;
     padding: 18px 20px;
     border-radius: 16px;
-    background: rgba(0, 0, 0, .46);
-    border: 1px solid rgba(255, 255, 255, .14)
+    background: rgba(255, 255, 255, .74);
+    border: 1px solid #dce9e1
 }
 
 .purpose-list b {
@@ -775,22 +866,22 @@ img {
 }
 
 .purpose-list small {
-    color: #cfe2d8
+    color: #52675d
 }
 
 footer {
     padding: 28px 6vw;
-    background: #04150e;
+    background: #e9f1ec;
     display: flex;
     justify-content: space-between;
     gap: 20px;
     flex-wrap: wrap;
-    color: #bcd3c8;
+    color: #52675d;
     font-size: 12px
 }
 
 .footer-brand {
-    color: #fff
+    color: #173d2d
 }
 
 .reveal {
@@ -886,7 +977,23 @@ footer {
         gap: 18px
     }
     .hero-side {
-        display: none
+        width: calc(100% - 28px);
+        justify-self: center
+    }
+    .hero-photo-card img {
+        height: 280px
+    }
+    .floating-photo {
+        width: 126px;
+        height: 102px
+    }
+    .floating-photo-general {
+        left: -24px;
+        bottom: 24px
+    }
+    .floating-photo-social {
+        right: -22px;
+        bottom: 88px
     }
     .flow,
     .feature-grid,
@@ -919,4 +1026,72 @@ footer {
     footer {
         padding: 24px 18px
     }
+}
+
+
+/* Bright white visual theme */
+
+body,
+.navbar,
+.flag-title,
+.workflow,
+.users,
+.features,
+.purpose,
+.section-bg {
+    color: #000;
+    background-color: #fff;
+}
+
+.hero h1,
+.section-head h2,
+.purpose h2,
+.communication-heading h3,
+.hero-copy>p,
+.section-head>p,
+.flow-step h3,
+.flow-step p,
+.pro-card h3,
+.pro-card p,
+.communication-heading p,
+.communication-item strong,
+.communication-item small,
+.feature-card h3,
+.feature-card p,
+.purpose-card h3,
+.purpose-card p,
+footer {
+    color: #000;
+}
+
+.hero h1 span,
+.section-head h2 span,
+.purpose h2 span,
+.communication-heading h3 span {
+    color: transparent;
+    background: linear-gradient(90deg, #ff4f64, #b66da8, #5c9bea);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.hero-copy>p,
+.section-head>p,
+.flow-step p,
+.pro-card p,
+.communication-heading p,
+.communication-item small,
+.feature-card p,
+.purpose-card p {
+    color: #000;
+}
+
+.navbar nav a,
+.language-switcher select,
+.photo-caption,
+.stats small,
+.eyebrow,
+.ribbon-title,
+.pro-card label,
+.purpose-list b {
+    color: #000;
 }
