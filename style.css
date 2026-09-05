@@ -10,7 +10,7 @@ body {
     margin: 0;
     font-family: Inter, Segoe UI, Arial, sans-serif;
     color: #24352d;
-    background: #f7f5fc;
+    background: #fff;
     overflow-x: hidden
 }
 
@@ -33,7 +33,7 @@ select {
     display: flex;
     align-items: center;
     gap: 24px;
-    background: #f7f5fc;
+    background: #fff;
     backdrop-filter: blur(18px);
     border-bottom: 1px solid rgba(255, 255, 255, .12);
     box-shadow: 0 8px 30px rgba(0, 0, 0, .22)
@@ -172,7 +172,7 @@ select {
     align-items: center;
     gap: 50px;
     padding: 70px clamp(20px, 6vw, 90px);
-    background: #f7f5fc
+    background: #fff
 }
 
 .hero-overlay {
@@ -486,22 +486,22 @@ img {
 
 .workflow {
     padding: 100px clamp(20px, 6vw, 90px);
-    background: #f7f5fc
+    background: #fff
 }
 
 .users {
     padding: 100px clamp(20px, 6vw, 90px);
-    background: #f7f5fc
+    background: #fff
 }
 
 .features {
     padding: 100px clamp(20px, 6vw, 90px);
-    background: #f7f5fc
+    background: #fff
 }
 
 .purpose {
     padding: 100px clamp(20px, 6vw, 90px);
-    background: #f7f5fc
+    background: #fff
 }
 
 .section-inner {
@@ -871,7 +871,7 @@ img {
 
 footer {
     padding: 28px 6vw;
-    background: #e9f1ec;
+    background: #fff;
     display: flex;
     justify-content: space-between;
     gap: 20px;
@@ -912,7 +912,7 @@ footer {
         right: 0;
         padding: 15px;
         flex-direction: column;
-        background: #061c12
+        background: #fff
     }
     .navbar nav.open a {
         width: 100%

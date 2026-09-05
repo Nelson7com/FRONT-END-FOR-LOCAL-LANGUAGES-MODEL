@@ -41,7 +41,7 @@ const languages = [
 const translations = {
     sw: {
         pageTitle: "LocalLang Tanzania AI",
-        mainHeading: "Teknolojia inayozungumza na kutafsiri <span>Kiswahili.</span>",
+        mainHeading: "Teknolojia inayotafasili na kuzungumza <span>lugha za asili Tanzania.</span>",
         navHome: "Mwanzo",
         navHow: "Jinsi inavyofanya kazi",
         navUsers: "Wataalamu",
@@ -136,7 +136,7 @@ const translations = {
     },
     en: {
         pageTitle: "LocalLang Tanzania AI",
-        mainHeading: "AI that speaks and translates <span>Swahili.</span>",
+        mainHeading: "Technology that translates and speaks <span>Tanzania's indigenous languages.</span>",
         navHome: "Home",
         navHow: "How it works",
         navUsers: "Professionals",
