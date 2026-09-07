@@ -45,7 +45,7 @@ const translations = {
         navHome: "Mwanzo",
         navHow: "Jinsi inavyofanya kazi",
         navUsers: "Wataalamu",
-        navFeatures: "Features",
+        navFeatures: "Sifa",
         navPurpose: "Faida",
         start: "Anza kutumia →",
         eyebrow: "AKILI BANDIA KWA LUGHA ZA TANZANIA",
