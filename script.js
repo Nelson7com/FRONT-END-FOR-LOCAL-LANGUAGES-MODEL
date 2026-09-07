@@ -232,6 +232,17 @@ const translations = {
 };
 
 let uiLanguage = localStorage.getItem("locallang-ui") || "sw";
+let darkMode = localStorage.getItem("locallang-theme") === "dark";
+
+function applyTheme(isDark) {
+    darkMode = isDark;
+    document.documentElement.classList.toggle("dark-mode", isDark);
+    const toggle = $("#themeToggle");
+    toggle.textContent = isDark ? "☀" : "☾";
+    toggle.setAttribute("aria-label", isDark ? "Enable light mode" : "Enable dark mode");
+    toggle.setAttribute("aria-pressed", String(isDark));
+    localStorage.setItem("locallang-theme", isDark ? "dark" : "light");
+}
 
 function buildLanguageSlider() {
     const track = $("#tribeTrack");
@@ -286,6 +297,7 @@ function setupProfessionSlider() {
 }
 
 $("#uiLanguage").addEventListener("change", e => applyUILanguage(e.target.value));
+$("#themeToggle").addEventListener("click", () => applyTheme(!darkMode));
 
 const mobileMenu = $("#mobileMenu");
 mobileMenu.addEventListener("click", () => $("#siteNav").classList.toggle("open"));
@@ -306,4 +318,5 @@ if ("IntersectionObserver" in window) {
 
 buildLanguageSlider();
 applyUILanguage(uiLanguage);
+applyTheme(darkMode);
 setupProfessionSlider();

@@ -115,6 +115,26 @@ select {
     color: #111
 }
 
+.theme-toggle {
+    width: 40px;
+    height: 40px;
+    display: inline-grid;
+    place-items: center;
+    border: 1px solid #dce9e1;
+    border-radius: 10px;
+    background: #fff;
+    color: #000 !important;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+    background: #f7d51c;
+    outline: 2px solid #f7d51c;
+    outline-offset: 2px;
+}
+
 .start,
 .btn {
     display: inline-flex;
@@ -412,7 +432,7 @@ img {
 .language-ribbon {
     grid-column: 1/-1;
     align-self: end;
-    margin-top: -10px;
+    margin-top: 12px;
     padding: 14px 18px;
     border: 1px solid rgba(255, 255, 255, .17);
     border-radius: 18px;
@@ -1018,7 +1038,7 @@ footer {
         padding: 24px
     }
     .language-ribbon {
-        margin-top: 25px
+        margin-top: 30px
     }
     .tribe-track {
         animation-duration: 60s
@@ -1094,4 +1114,139 @@ footer {
 .pro-card label,
 .purpose-list b {
     color: #000;
+}
+
+/* Keep every visible label readable in the white theme. */
+body,
+body * {
+    color: #000 !important;
+}
+
+.hero h1 span,
+.section-head h2 span,
+.purpose h2 span,
+.communication-heading h3 span {
+    color: #000 !important;
+    background: none;
+}
+
+.tribe-pill:hover,
+.tribe-pill:focus-visible {
+    background: #f7d51c;
+    color: #000;
+    border-color: #000;
+}
+
+html.dark-mode body,
+html.dark-mode .navbar,
+html.dark-mode .flag-title,
+html.dark-mode .workflow,
+html.dark-mode .users,
+html.dark-mode .features,
+html.dark-mode .purpose,
+html.dark-mode footer,
+html.dark-mode .section-bg {
+    background-color: #111827;
+    color: #f8fafc !important;
+}
+
+html.dark-mode body *,
+html.dark-mode .hero h1,
+html.dark-mode .section-head h2,
+html.dark-mode .purpose h2,
+html.dark-mode .communication-heading h3,
+html.dark-mode .hero-copy > p,
+html.dark-mode .section-head > p,
+html.dark-mode .flow-step h3,
+html.dark-mode .flow-step p,
+html.dark-mode .pro-card h3,
+html.dark-mode .pro-card p,
+html.dark-mode .communication-heading p,
+html.dark-mode .communication-item strong,
+html.dark-mode .communication-item small,
+html.dark-mode .feature-card h3,
+html.dark-mode .feature-card p,
+html.dark-mode .purpose-inner > div:first-child p,
+html.dark-mode footer {
+    color: #f8fafc !important;
+}
+
+html.dark-mode .hero h1 span,
+html.dark-mode .section-head h2 span,
+html.dark-mode .purpose h2 span,
+html.dark-mode .communication-heading h3 span {
+    color: #f7d51c !important;
+}
+
+html.dark-mode .navbar {
+    border-bottom-color: #374151;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, .4);
+}
+
+html.dark-mode .navbar nav a,
+html.dark-mode .language-switcher select,
+html.dark-mode .language-switcher option {
+    color: #f8fafc !important;
+}
+
+html.dark-mode .language-switcher,
+html.dark-mode .theme-toggle,
+html.dark-mode .menu,
+html.dark-mode .language-ribbon,
+html.dark-mode .communication-panel,
+html.dark-mode .communication-item,
+html.dark-mode .feature-card,
+html.dark-mode .purpose-list > div,
+html.dark-mode .flow-step,
+html.dark-mode .pro-card {
+    background: #1f2937;
+    border-color: #374151;
+}
+
+html.dark-mode .theme-toggle {
+    color: #f8fafc !important;
+}
+
+html.dark-mode .start,
+html.dark-mode .btn.primary,
+html.dark-mode .hero-badge {
+    color: #000 !important;
+}
+
+html.dark-mode .tribe-pill {
+    background: #374151;
+    border-color: #4b5563;
+    color: #f8fafc !important;
+}
+
+html.dark-mode .tribe-pill.active,
+html.dark-mode .tribe-pill:hover,
+html.dark-mode .tribe-pill:focus-visible {
+    background: #f7d51c;
+    border-color: #f7d51c;
+    color: #000 !important;
+}
+
+html.dark-mode .pro-card label,
+html.dark-mode .ribbon-title,
+html.dark-mode .eyebrow,
+html.dark-mode .stats small {
+    color: #f7d51c !important;
+}
+
+html.dark-mode .pro-card p,
+html.dark-mode .flow-step p,
+html.dark-mode .section-head > p,
+html.dark-mode .hero-copy > p,
+html.dark-mode .communication-heading p,
+html.dark-mode .communication-item small,
+html.dark-mode .feature-card p,
+html.dark-mode .purpose-inner > div:first-child p,
+html.dark-mode footer {
+    color: #d1d5db !important;
+}
+
+html.dark-mode .theme-toggle:hover,
+html.dark-mode .theme-toggle:focus-visible {
+    color: #000 !important;
 }
